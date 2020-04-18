@@ -1,0 +1,38 @@
+/* ============================================= */
+/*                  Variables                    */
+/* ============================================= */
+
+// Breakpoints //
+$break-xs: 480px;
+$break-s: 768px;
+$break-m: 998px;
+$break-l: 1440px;
+
+$breakpoints: (
+    'xs': 480px,
+    's': 768px,
+    'm': 998px,
+    'l': 1440px,
+);
+
+// Colors //
+$white: #FFF;
+$black: #000; 
+$overlay-color: #6A7987;
+$background-color: #76b6c4;
+$primary-color: #F1F3F4;
+$secondary-color: #E2E6E9;
+$secondary-c-lt: ligthen($secondary-color, 10%);
+$color-shade: #010E18;
+$border-shade: #ccc;
+$text-color: #999;
+
+
+// Fonts //
+$font-size: 16px;
+$primary-font-stack: "Lato", sans-serif; 
+$secondary-font-stack: "Nunito-Sans", serif;
+
+$light: 300; 
+$regular: 500; 
+$bold: 700; 

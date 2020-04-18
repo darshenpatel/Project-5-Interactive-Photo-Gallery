@@ -1,0 +1,35 @@
+/* ============================================= */
+/*              Base Body Styles                 */
+/* ============================================= */
+
+* {
+    background-color: $primary-color;
+    font-family: $primary-font-stack;
+    color: $color-shade;
+    box-sizing: border-box;  
+}
+
+main {
+    width: 100%;
+    transition: 2s;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    & li {
+        list-style: none;
+    }
+}
+
+::selection {
+    background-color: $background-color;
+    color: $white;
+}
+
+
+#lighcase-overlay {
+    background-color: $overlay-color;
+}
