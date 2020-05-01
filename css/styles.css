@@ -4,34 +4,6 @@
 /* ============================================= */
 /*                  Variables                    */
 /* ============================================= */
-/* ============================================= */
-/*              Base Body Styles                 */
-/* ============================================= */
-* {
-  background-color: #F1F3F4;
-  font-family: "Lato", sans-serif;
-  color: #010E18;
-  box-sizing: border-box;
-}
-
-main {
-  width: 100%;
-  transition: 2s;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-::selection {
-  background-color: #76b6c4;
-  color: #FFF;
-}
-
-#lighcase-overlay {
-  background-color: #6A7987;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -372,6 +344,34 @@ template {
 }
 
 /* ============================================= */
+/*              Base Body Styles                 */
+/* ============================================= */
+* {
+  background-color: #F1F3F4;
+  font-family: "Lato", sans-serif;
+  color: #010E18;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  transition: 2s;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+::selection {
+  background-color: #76b6c4;
+  color: #FFF;
+}
+
+#lighcase-overlay {
+  background-color: #6A7987;
+}
+
+/* ============================================= */
 /*                 Typography                    */
 /* ============================================= */
 .list {
@@ -402,7 +402,9 @@ template {
 }
 
 .images {
-  box-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .images img {
   background-color: #FFF;

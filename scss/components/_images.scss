@@ -19,7 +19,10 @@
 }
 
 .images {
-    box-align: center;
+    //removed box-align: center;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
     & img {
         background-color: $white;
         border: 2px solid $black;

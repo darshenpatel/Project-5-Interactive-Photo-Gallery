@@ -16,10 +16,10 @@ $('searchInput').keyup(function() {
     let search = $('searchInput').val().toLowerCase(); 
     for (let i = 0; i < imageContainer.length; i++) {
         if (captions[i].indexOf(search) < 1) {
-            $('imageContainer').hide();
+            $('imageContainer').eq(i).hide();
         }
         else {
-            $('imageContainer').show(); 
+            $('imageContainer').eq(i).show(); 
         }
     }
 });
