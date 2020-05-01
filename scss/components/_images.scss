@@ -1,15 +1,7 @@
-.toggle {
-    display: flex;
-    width: 50px;
-    position: absolute;
-    transform: rotate3d(90deg);
-    filter: invert(100%);
-}
-
 .image-container {
-    width: 50%;
+     width: 100%;
      margin: auto;  
-     display: flex; 
+     display: block; 
      flex-direction: row;
      flex-wrap: wrap; 
      justify-content: space-evenly;
@@ -17,20 +9,28 @@
         margin: 20px auto; 
         flex-basis: 200px; 
     }
+
+    @include breakpoints {
+        max-width: 1400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .images {
     box-align: center;
     & img {
-        background-color: $background-color ;
+        background-color: $white;
         border: 2px solid $black;
-        border-radius: 5px;
+        border-radius: 2px;
         box-shadow: 2px 2px 5px $black;  
-        margin: 20px 40px;
+        margin: 50px 50px;
         padding: 5px;
-        transform: scale(1.5); 
+        transform: scale(1.2); 
         transition-duration: 0.2s;
         &:hover {
+            background-color: $background-color;
             transform: scale(1.2) rotate(2deg);                       
         }
     }

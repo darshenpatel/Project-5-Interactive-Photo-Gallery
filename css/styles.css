@@ -1,4 +1,7 @@
 /* ============================================= */
+/*                  Mixins                       */
+/* ============================================= */
+/* ============================================= */
 /*                  Variables                    */
 /* ============================================= */
 /* ============================================= */
@@ -14,20 +17,15 @@
 main {
   width: 100%;
   transition: 2s;
-}
-
-ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-evenly;
 }
-ul li {
-  list-style: none;
-}
 
 ::selection {
-  background-color: #FFF;
+  background-color: #76b6c4;
+  color: #FFF;
 }
 
 #lighcase-overlay {
@@ -380,6 +378,78 @@ template {
   color: #E2E6E9;
   font-size: 16px;
   font-weight: 700;
+}
+
+.image-container {
+  width: 100%;
+  margin: auto;
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.image-container a {
+  margin: 20px auto;
+  flex-basis: 200px;
+}
+@media (min-width: 768px) {
+  .image-container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.images {
+  box-align: center;
+}
+.images img {
+  background-color: #FFF;
+  border: 2px solid #000;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px #000;
+  margin: 50px 50px;
+  padding: 5px;
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}
+.images img:hover {
+  background-color: #76b6c4;
+  transform: scale(1.2) rotate(2deg);
+}
+
+nav {
+  text-align: center;
+}
+nav h1 {
+  color: #000;
+}
+nav h1:hover {
+  color: #76b6c4;
+}
+
+#search-gallery {
+  background: none;
+  margin: 50px auto;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+#search-gallery::placeholder {
+  font-size: 16px;
+  color: ligthen(#E2E6E9, 10%);
+  opacity: 50%;
+  padding-left: 10px;
+}
+#search-gallery:focus {
+  outline: none;
+  padding-left: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
