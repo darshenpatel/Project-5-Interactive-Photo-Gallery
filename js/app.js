@@ -3,14 +3,18 @@ let imageContainer = document.getElementsByTagName('a');
 let captions = [];
 
 jQuery(document).ready(function($) {
-    $('a[data-rel^=lightcase]').lightcase({
-    transition: 'elastic',
-    showSequenceInfo: true,
-    showTitle: true
-    });
+    $('a[data-rel^=lightcase]').lightcase();
+    $('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({
+        showSequenceInfo: false,
+        showTitle: true, 
+        transition: 'scrollHorizontal',
+        transitionOpen: 'elastic',
+        transitionClose: 'elastic'
+    });  
 });
 
-$('searchInput').on('click', function () {
+
+$('searchInput').click(function () {
     $('placeholder').hide(); 
 }); 
 
