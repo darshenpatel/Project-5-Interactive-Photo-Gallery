@@ -9,11 +9,6 @@ nav {
     
 }
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
-
 #search-gallery {
     background: none; 
     margin: 50px auto; 
@@ -25,6 +20,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     justify-content: center;
     border: 2px solid $border-shade;
     border-radius: 10px;
+    padding-right: 10px; 
     &::placeholder {
         font-size: $font-size;
         color: $secondary-c-lt;
