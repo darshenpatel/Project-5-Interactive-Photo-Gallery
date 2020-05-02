@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     $('a[data-rel^=lightcase]').lightcase({
     transition: 'elastic',
-    showSequenceInfo: false,
+    showSequenceInfo: true,
     showTitle: true
     });
 });
@@ -15,7 +15,7 @@ let captions = [];
 $('searchInput').keyup(function() {
     let search = $('searchInput').val().toLowerCase(); 
     for (let i = 0; i < imageContainer.length; i++) {
-        if (captions[i].indexOf(search) < 1) {
+        if (captions[i].indexOf(search) < 0) {
             $('imageContainer').eq(i).hide();
         }
         else {
@@ -24,7 +24,7 @@ $('searchInput').keyup(function() {
     }
 });
 
-$('.searchInput').each(function(index){
+$('.imageContainer').each(function(index){
     let dataCaption = $(this).children().attr('data-lc-caption').toLowerCase();
     captions.push(dataCaption);
 });

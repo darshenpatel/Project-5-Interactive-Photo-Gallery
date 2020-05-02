@@ -2,7 +2,8 @@
 /*              Base Body Styles                 */
 /* ============================================= */
 
-* {
+//Removed * { ... }, because it was applying as a universal selector ... causing issues to the lightcase plugin.
+body {
     background-color: $primary-color;
     font-family: $primary-font-stack;
     color: $color-shade;
