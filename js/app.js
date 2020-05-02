@@ -1,7 +1,3 @@
-let input = document.getElementsByTagName('input');
-let imageContainer = document.getElementsByTagName('a');
-let captions = [];
-
 jQuery(document).ready(function($) {
     $('a[data-rel^=lightcase]').lightcase();
     $('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({
@@ -10,8 +6,12 @@ jQuery(document).ready(function($) {
         transition: 'scrollHorizontal',
         transitionOpen: 'elastic',
         transitionClose: 'elastic'
-    });  
+    });
 });
+
+// let input = $(document.getElementsByTagName('input'));
+// let imageContainer = $(document.querySelectorAll('a'));
+let captions = [];
 
 
 $('input').focus(function () {
@@ -22,21 +22,23 @@ $('input').blur(function () {
     $(this).attr('placeholder', 'Search');
 }); 
 
-
+$('.imageContainer').each(function () {
+    let dataCaption = $(this).attr('a').toLowerCase();
+    captions.push(dataCaption);
+});
 
 $('input').keyup(function() {
-    let search = $('input').val().toLowerCase(); 
-    for (let i = 0; i < imageContainer.length; i++) {
-        if (captions[i].indexOf(search) > -1) {
-            $('imageContainer').eq(i).hide();
+    let searchFor = $(this).val().toLowerCase(); 
+    for (let i = 0; i < captions.length; i++) {
+        if (captions[i].indexOf(searchFor) < 0) {
+            $('.imageContainer').eq(i).hide();
         }
         else {
-            $('imageContainer').eq(i).show(); 
+            $('.imageContainer').eq(i).show(); 
         }
     }
 });
 
-$('imageContainer').each(function(index){
-    let dataCaption = $(this).getAttribute('title').toLowerCase();
-    captions.push(dataCaption);
-});
+
+
+
