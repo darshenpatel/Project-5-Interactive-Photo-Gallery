@@ -442,6 +442,7 @@ nav h1:hover {
   justify-content: center;
   border: 2px solid #ccc;
   border-radius: 10px;
+  padding-right: 10px;
 }
 #search-gallery::placeholder {
   font-size: 16px;
