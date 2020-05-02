@@ -1,4 +1,4 @@
-let searchInput = document.getElementById('search-gallery');
+let input = document.getElementsByTagName('input');
 let imageContainer = document.getElementsByTagName('a');
 let captions = [];
 
@@ -14,14 +14,20 @@ jQuery(document).ready(function($) {
 });
 
 
-$('searchInput').click(function () {
-    $('placeholder').hide(); 
+$('input').focus(function () {
+    $(this).removeAttr('placeholder'); 
 }); 
 
-$('searchInput').keyup(function($) {
-    let search = $('searchInput').val().toLowerCase(); 
+$('input').blur(function () {
+    $(this).attr('placeholder', 'Search');
+}); 
+
+
+
+$('input').keyup(function() {
+    let search = $('input').val().toLowerCase(); 
     for (let i = 0; i < imageContainer.length; i++) {
-        if (captions[i].indexOf(search) < 0) {
+        if (captions[i].indexOf(search) > -1) {
             $('imageContainer').eq(i).hide();
         }
         else {
@@ -31,6 +37,6 @@ $('searchInput').keyup(function($) {
 });
 
 $('imageContainer').each(function(index){
-    let dataCaption = $(this).children().attr('.images').toLowerCase();
+    let dataCaption = $(this).getAttribute('title').toLowerCase();
     captions.push(dataCaption);
 });
