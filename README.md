@@ -18,7 +18,7 @@ Project Requirements
   * The ability to add text captions to each image in the lightbox.
   * Back and forward arrows to switch between photos when the lighcase is visible.
   * Make sure there is a way to close the lightbox and return to the gallery view.
-  - [x] Lightcase - The smart and flexible Lightbox Plugin
+    - [x] Lightcase - The smart and flexible Lightbox Plugin
 
 ### Research, find and implement a jQuery plugin for the search box:
   * The search box at the top of the page should filters photos based on the captions.
