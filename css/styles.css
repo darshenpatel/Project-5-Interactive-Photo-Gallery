@@ -371,15 +371,6 @@ main {
   background-color: #6A7987;
 }
 
-/* ============================================= */
-/*                 Typography                    */
-/* ============================================= */
-.list {
-  color: #E2E6E9;
-  font-size: 16px;
-  font-weight: 700;
-}
-
 .image-container {
   width: 100%;
   margin: auto;
@@ -442,17 +433,33 @@ nav h1:hover {
   justify-content: center;
   border: 2px solid #ccc;
   border-radius: 10px;
+  padding-left: 10px;
   padding-right: 10px;
 }
 #search-gallery::placeholder {
   font-size: 16px;
   color: ligthen(#E2E6E9, 10%);
   opacity: 50%;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 #search-gallery:focus {
   outline: none;
   padding-left: 10px;
+}
+
+.btn-reset {
+  margin: 15px auto;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  color: #FFF;
+  background: #76b6c4;
+  border: solid 1px;
+  border-color: #ccc;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
