@@ -9,6 +9,7 @@ nav {
     
 }
 
+
 #search-gallery {
     background: none; 
     margin: 50px auto; 
@@ -20,16 +21,34 @@ nav {
     justify-content: center;
     border: 2px solid $border-shade;
     border-radius: 10px;
+    //Added a padding-left to allow for the text to stay in place, when focused off. 
+    padding-left: 10px;
+    // Added a padding-right to allow for a proper view of the browser's built in "x" option.
     padding-right: 10px; 
     &::placeholder {
         font-size: $font-size;
         color: $secondary-c-lt;
         opacity: 50%;
-        padding-left: 10px;
+        padding-left: 5px;
     }
     &:focus {
         outline: none;
         padding-left: 10px;
     }
+}
+
+.btn-reset { 
+  margin: 15px auto;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  color: $white;
+  background: $background-color;
+  border: solid 1px;
+  border-color: $border-shade; 
+  cursor: pointer;
 }
 
