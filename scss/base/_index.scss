@@ -1,5 +1,4 @@
 @import 'normalize';
 @import 'main';
-@import 'typography';
 
-// Due to the import order I had here (main, normalize, typopgraphy), the normalize css rules were overwriting some items in the main scss file. //
+// Due to the import order I had here originally (main, normalize, typopgraphy), the normalize css rules were overwriting some items in the main scss file. //
