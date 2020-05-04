@@ -59,5 +59,8 @@ $('input').keyup(function() {
 
 $('.btn-reset').click(function () {
     $('input').val('');
-    $('.images').attr('a');  
+    //The method to reset the images too
+    $('.images a').each(function () {
+        $(this).show(); 
+    });
 }); 
